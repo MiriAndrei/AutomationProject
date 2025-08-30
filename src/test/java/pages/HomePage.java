@@ -15,7 +15,10 @@ public class HomePage extends BasePage{
     private WebElement signupLoginElement;
 
     @FindBy(xpath = "//a[contains(text(),'Logged in as')]/b")
-    private WebElement loggedAsElement;
+    private WebElement loggedElement;
+
+    @FindBy(xpath = "//a[@href='/products']")
+    private WebElement productElement;
 
     public void interactWithSignupLoginMenu() {
         elementHelper.clickJSElement(signupLoginElement);
@@ -23,9 +26,12 @@ public class HomePage extends BasePage{
     }
 
     public void validateLogin(String expectedUserValue){
-            elementHelper.validateElementEqualsText(loggedAsElement, expectedUserValue);
+            elementHelper.validateElementEqualsText(loggedElement, expectedUserValue);
+    }
 
-
+    public void interactWithProductsPage (){
+        elementHelper.clickJSElement(productElement);
+        LoggerUtility.infoLog("The user press on the Products menu");
     }
 
 }

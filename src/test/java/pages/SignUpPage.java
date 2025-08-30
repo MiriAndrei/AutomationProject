@@ -67,7 +67,6 @@ public class SignUpPage extends BasePage{
         switch (genderValue) {
             case "Mr":
                 elementHelper.clickElement(genderElementList.get(0));
-
                 break;
             case "Mrs":
                 elementHelper.clickElement(genderElementList.get(1));
@@ -87,7 +86,7 @@ public class SignUpPage extends BasePage{
         LoggerUtility.infoLog("The user selects the months field with value: " + yearsValue);
         elementHelper.clickJSElement(newsletterElement);
         LoggerUtility.infoLog("The user checks the newsletter box");
-        elementHelper.clickElement(offersElement);
+        elementHelper.clickJSElement(offersElement);
         LoggerUtility.infoLog("The user checks the special offers box");
 
         elementHelper.fillElement(firstNameElement, firstNameValue);
