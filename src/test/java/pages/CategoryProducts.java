@@ -21,7 +21,7 @@ public class CategoryProducts extends BasePage{
 
     public void addProduct(int index) {
         if(index < addToCartButtonElementList.size()) {
-            elementHelper.clickElement(addToCartButtonElementList.get(index));
+            elementHelper.clickJSElement(addToCartButtonElementList.get(index));
             LoggerUtility.infoLog("Added product at index " + index + " to cart");
         }
     }

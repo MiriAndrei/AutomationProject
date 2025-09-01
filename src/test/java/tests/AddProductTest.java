@@ -29,7 +29,7 @@ public class AddProductTest extends SharedData {
         productsPage.selectCategory(categoryValue,menSubCategoryValue);
 
         CategoryProducts categoryProducts = new CategoryProducts(getDriver());
-        categoryProducts.addProduct(0);
+        categoryProducts.addProduct(6);
         categoryProducts.dealWithAddPopUp();
     }
 }
