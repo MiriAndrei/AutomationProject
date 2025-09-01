@@ -28,7 +28,6 @@ public class SharedData {
               driver=firefoxBrowser.getDriver();
               break;
       }
-
         LoggerUtility.infoLog("The browser "+ browser+" was opend with success");
     }
 
@@ -38,11 +37,9 @@ public class SharedData {
         if(result.getStatus()==ITestResult.FAILURE){
             LoggerUtility.errorLog(result.getThrowable().getMessage());
         }
-//        driver.quit();
+        driver.quit();
 
         LoggerUtility.infoLog("The browser "+ browser+" was closed with success");
-
-
         LoggerUtility.finishTest(this.getClass().getSimpleName());
     }
 
